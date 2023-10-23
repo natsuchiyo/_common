@@ -1,3 +1,5 @@
+import { brandColor } from "../../_config/themeColors";
+
 export const SelectTheme = {
     baseStyle: {
         field: {
@@ -19,6 +21,6 @@ export const SelectTheme = {
         },
     },
     defaultProps: {
-        focusBorderColor: 'pink.300',
+        focusBorderColor: brandColor[300],
     },
 };

@@ -23,7 +23,7 @@ export const Title = () => {
                 size='lg'
                 children={pageInfo.titleElm}
             />
-            {/* <Tags tags={pageInfo.tags} justifyContent='right' /> */}
+            <Tags tags={pageInfo.tags} justifyContent='right' />
         </Box>
     );
 };

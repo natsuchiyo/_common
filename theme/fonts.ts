@@ -5,7 +5,9 @@ const kosugimaru = Kosugi_Maru({
     weight: "400",
     subsets: ["latin"],
     display: "swap",
+    adjustFontFallback: false
 });
+
 
 
 export const fontsTheme = {

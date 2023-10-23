@@ -14,3 +14,4 @@ export const getPageInfo = (url: string) => {
 
     return pageInfoList.get(convertUrlToPageName(url)) || notFoundPageInfo;
 };
+

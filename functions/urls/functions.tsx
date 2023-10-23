@@ -1,5 +1,7 @@
 import { Box } from "@chakra-ui/react";
 import { BasePageInfoType, PageInfoType, RoutingType } from "../../types";
+import { getPageInfo } from "./usePageInfo";
+import { Linking } from "../../components/parts/Linking";
 
 
 

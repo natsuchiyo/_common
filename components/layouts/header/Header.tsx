@@ -3,7 +3,7 @@ import { faLaptopCode } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { Linking } from '../../parts/Linking';
 import { headerHeight } from '../_values';
-import { websiteName } from '../../../../_config/constants';
+import { headerIcon, websiteName } from '../../../../_config/constants';
 
 
 
@@ -21,7 +21,7 @@ export function Header() {
             zIndex='layout'
         >
             <Linking href='/' textDecoration='none !important' color='white'>
-                <FontAwesomeIcon icon={faLaptopCode} style={{ marginRight: '4px' }} />{websiteName}
+                <FontAwesomeIcon icon={headerIcon} style={{ marginRight: '4px' }} />{websiteName}
             </Linking>
         </Center>
     );

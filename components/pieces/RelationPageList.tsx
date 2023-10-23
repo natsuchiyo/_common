@@ -6,19 +6,15 @@ import { usePageInfo, getPageInfo } from "../../functions/urls/usePageInfo";
 import { IconText } from "../parts/IconText";
 import { Linking } from "../parts/Linking";
 import { Paper } from "../parts/Paper";
-import { Key } from "react";
-
 
 
 
 export const RelationPageList = () => {
 
 
-
     const relationPageList = usePageInfo().relationPageList;
 
     if (!relationPageList) return null;
-
 
 
     return (
@@ -32,7 +28,7 @@ export const RelationPageList = () => {
                 {relationPageList.map((url: string) => (
                     <ListItem key={url}>
                         <HStack>
-                            <ListIcon as={ArrowRightIcon} color='pink.500' />
+                            <ListIcon as={ArrowRightIcon} color='button' />
                             <Linking href={url} children={getPageInfo(url).titleElm} />
                         </HStack>
                     </ListItem>

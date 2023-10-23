@@ -1,20 +1,28 @@
-import { extendTheme, withDefaultColorScheme } from "@chakra-ui/react";
+import { extendTheme, theme, withDefaultColorScheme } from "@chakra-ui/react";
 import { ButtonTheme } from "./button";
 import { globalTheme } from "./global";
 import { InputTheme, TextAreaTheme } from "./input";
 import { SelectTheme } from "./select";
 import { TableTheme } from "./table";
 import { fontsTheme } from "./fonts";
-import { themeColors } from "../../_config/themeColors";
+import { accentColor, brandColor, clickableColor, colorScheme } from "../../_config/themeColors";
 
 
 
 export const customTheme = extendTheme(
 
-    withDefaultColorScheme({ colorScheme: 'pink' }),
+    withDefaultColorScheme({ colorScheme: colorScheme }),
 
     {
-        colors: themeColors,
+        colors: {
+            mainLight: brandColor[400],
+            mainDark: brandColor[700],
+            button: clickableColor[500],
+            accent: accentColor[500],
+            link: clickableColor[600],
+            warning: theme.colors.red[500],
+            subtext: theme.colors.gray[600],
+        },
 
         breakpoints: {
             sm: '500px',
@@ -34,6 +42,7 @@ export const customTheme = extendTheme(
             useSystemColorMode: false,
         },
 
+        // この方法では効かないのでbodyにclassnameを付けた
         fonts: fontsTheme,
 
         styles: { global: globalTheme },

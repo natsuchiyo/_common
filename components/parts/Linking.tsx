@@ -1,6 +1,8 @@
 import NextLink from 'next/link';
 import { Link as ChakraLink, LinkOverlay as ChakraLinkOverlay, LinkOverlayProps, LinkProps } from '@chakra-ui/react';
 import { ExternalLinkIcon } from '../chakraIcons';
+import { brandColor } from '../../../_config/themeColors';
+import { getBrandColor } from '../../functions/theme';
 
 
 
@@ -41,7 +43,7 @@ export function ButtonLinking(props: LinkProps & { href: string; }) {
     return (
         <Linking
             textDecoration='none !importtant'
-            _hover={{ backgroundColor: 'pink.100' }}
+            _hover={{ backgroundColor: getBrandColor(100) }}
             {...props}
         />
     );

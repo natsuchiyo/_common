@@ -1,5 +1,6 @@
 import { theme } from "@chakra-ui/react";
 import { brandColor } from "../../_config/themeColors";
+import { getBrandColor } from "../functions/theme";
 
 
 export const globalTheme = {
@@ -21,7 +22,7 @@ export const globalTheme = {
         background: 'gray.100',
     },
     '::-webkit-scrollbar-thumb': {
-        background: brandColor[200],
+        background: getBrandColor(100),
         borderRadius: '5px'
     }
 };

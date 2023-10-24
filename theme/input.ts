@@ -1,4 +1,5 @@
 import { brandColor } from "../../_config/themeColors";
+import { getBrandColor } from "../functions/theme";
 
 export const InputTheme = {
     baseStyle: {
@@ -19,12 +20,12 @@ export const InputTheme = {
         },
     },
     defaultProps: {
-        focusBorderColor: brandColor[300],
+        focusBorderColor: getBrandColor(300),
     },
 };
 
 export const TextAreaTheme = {
     defaultProps: {
-        focusBorderColor: brandColor[300],
+        focusBorderColor: getBrandColor(300),
     },
 };

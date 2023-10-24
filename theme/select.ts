@@ -1,4 +1,5 @@
 import { brandColor } from "../../_config/themeColors";
+import { getBrandColor } from "../functions/theme";
 
 export const SelectTheme = {
     baseStyle: {
@@ -21,6 +22,6 @@ export const SelectTheme = {
         },
     },
     defaultProps: {
-        focusBorderColor: brandColor[300],
+        focusBorderColor: getBrandColor(300),
     },
 };

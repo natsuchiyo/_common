@@ -4,7 +4,8 @@ import { Slider, SliderTrack, SliderFilledTrack, SliderThumb, SliderProps } from
 import { useContext } from "react";
 import { Controller } from "react-hook-form";
 import { FormContext } from "../Form";
-
+import { brandColor } from "../../../../_config/themeColors";
+import { getBrandColor } from "../../../functions/theme";
 
 
 
@@ -13,9 +14,9 @@ export const SliderInput = (props: SliderProps) => {
     return (
         <Slider size='lg' marginX='2' {...props as any}>
             <SliderTrack>
-                <SliderFilledTrack bg='pink.500' />
+                <SliderFilledTrack bg={getBrandColor(500)} />
             </SliderTrack>
-            <SliderThumb bg='pink.500' />
+            <SliderThumb bg={getBrandColor(500)} />
         </Slider>
     );
 };

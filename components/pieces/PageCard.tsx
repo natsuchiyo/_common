@@ -8,7 +8,7 @@ import { getPageInfo } from "../../functions/urls/usePageInfo";
 
 
 
-export const Card = ({ url }: { url: string; }) => {
+export const PageCard = ({ url }: { url: string; }) => {
 
 
     const pageInfo = getPageInfo(url);
@@ -30,6 +30,7 @@ export const Card = ({ url }: { url: string; }) => {
                 boxShadow: 'md'
             }}
         >
+
             <ExportedImage
                 priority
                 src={`${baseUrl}/img${url}.webp`}
@@ -38,6 +39,7 @@ export const Card = ({ url }: { url: string; }) => {
                 height={200}
                 style={{ objectFit: 'contain' }}
             />
+
             <Divider borderColor='mainDark' borderBottomWidth={2} margin='auto' width='80%' />
 
             <Box padding='5'>

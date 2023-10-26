@@ -2,7 +2,7 @@ import { Center } from '@chakra-ui/react';
 import { faLaptopCode } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { Linking } from '../../parts/Linking';
-import { headerHeight } from '../_values';
+import { headerHeight } from '../_constants';
 import { headerIcon, websiteName } from '../../../../_config/constants';
 
 

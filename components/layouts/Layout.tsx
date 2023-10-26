@@ -1,6 +1,6 @@
 import { Grid, GridItem } from "@chakra-ui/react";
 import { ReactNode } from "react";
-import { leftNavWidth, headerHeight } from "./_values";
+import { leftNavWidth, headerHeight } from "./_constants";
 import { Header } from "./header/Header";
 import { Nav } from "./nav/Nav";
 import { ContentsArea } from "./ContentsArea";

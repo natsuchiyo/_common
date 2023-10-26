@@ -1,12 +1,11 @@
 import { Center } from '@chakra-ui/react';
 import { Infomations } from '../../pieces/Infomations';
 import { RelationPageList } from '../../pieces/RelationPageList';
-import { memo } from 'react';
-import { headerHeight } from '../_values';
+import { headerHeight } from '../_constants';
 
 
 
-export const Aside = memo(function Aside() {
+export const Aside = function Aside() {
 
     return (
         <>
@@ -18,4 +17,4 @@ export const Aside = memo(function Aside() {
             </Center>
         </>
     );
-});
+};

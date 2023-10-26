@@ -30,9 +30,6 @@ export const formatNum = (num: any, dicimalLength: number) => {
 
 
 
-// export const getImageUrl = (url:string) => {
-//     return baseUrl+url
-// };
 
 
 export const merge = deepmerge();

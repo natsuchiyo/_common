@@ -1,8 +1,8 @@
 /**
  * できるだけimportはしないようにする
  */
-import { isProduction } from "../constants";
-import { notice } from "./console";
+import { isProduction } from "../../constants";
+import { notice } from "../console";
 
 
 

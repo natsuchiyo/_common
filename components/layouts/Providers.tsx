@@ -1,7 +1,7 @@
 'use client';
 
 import { ChakraProvider } from "@chakra-ui/react";
-import { PropsWithChildren, ReactNode } from "react";
+import { PropsWithChildren } from "react";
 import { RecoilRoot } from "recoil";
 import { customTheme } from "../../theme/theme";
 import { GoogleAnalytics } from "nextjs-google-analytics";

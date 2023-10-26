@@ -3,9 +3,9 @@
 import { ModalOverlay, ModalContent, Modal as ChakraModal, ModalProps, ModalCloseButton, ModalHeader, Button, ModalFooter, ModalBody } from '@chakra-ui/react';
 import { FieldValues } from 'react-hook-form';
 import { Form, FormPropsType } from '../forms/Form';
-import { FormButton } from '../forms/FormButton';
 import { useModal } from './useModal';
 import { useSuccessToast } from '../../functions/hooks/useToast';
+import { FormButton } from '../forms/parts/FormButton';
 
 
 

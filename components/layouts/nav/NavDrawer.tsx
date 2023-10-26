@@ -1,7 +1,9 @@
+'use client';
+
 import { SmallCloseIcon, HamburgerIcon } from '@chakra-ui/icons';
 import { IconButton, Drawer, DrawerOverlay, DrawerContent, useDisclosure } from '@chakra-ui/react';
 import { PropsWithChildren } from 'react';
-import { headerHeight, leftNavWidth } from '../_values';
+import { headerHeight, leftNavWidth } from '../_constants';
 
 
 
@@ -15,7 +17,6 @@ export function NavDrawer(props: PropsWithChildren) {
             <IconButton
                 zIndex='layout'
                 position='fixed'
-                // top={'-' + headerHeight}
                 top={0}
                 width={headerHeight}
                 height={headerHeight}

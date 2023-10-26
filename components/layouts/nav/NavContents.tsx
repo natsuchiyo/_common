@@ -1,7 +1,7 @@
 import { List, LinkBox, ListItem, Box } from '@chakra-ui/react';
 import { simulationUrlList } from '../../../../_config/urls';
 import { LinkingOverlay } from '../../parts/Linking';
-import { headerHeight, leftNavWidth } from '../_values';
+import { headerHeight, leftNavWidth } from '../_constants';
 import { getPageInfo } from '../../../functions/urls/usePageInfo';
 import { IconText } from '../../parts/IconText';
 import { DragHandleIcon } from '../../chakraIcons';

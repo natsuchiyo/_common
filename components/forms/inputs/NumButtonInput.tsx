@@ -4,7 +4,7 @@ import { Button, Input, InputProps, Box, FormControlProps } from '@chakra-ui/rea
 import { forwardRef, LegacyRef, useContext } from 'react';
 import { get, RegisterOptions, useFormState } from 'react-hook-form';
 import { FormContext } from '../Form';
-import { FormErrorTooltip } from '../FormErrorTooltip';
+import { FormErrorTooltip } from '../parts/FormErrorTooltip';
 
 
 

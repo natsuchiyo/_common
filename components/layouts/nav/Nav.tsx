@@ -1,4 +1,3 @@
-import { memo } from "react";
 import { NavWrapper } from "./NavWrapper";
 import { NavContents } from "./NavContents";
 

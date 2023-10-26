@@ -1,7 +1,7 @@
 import { Grid, GridItem, Center } from "@chakra-ui/react";
 import { PropsWithChildren } from "react";
 import { Footer } from "./footer/Footer";
-import { asideWidth } from "./_values";
+import { asideWidth } from "./_constants";
 import { Aside } from "./aside/Aside";
 
 

@@ -59,22 +59,22 @@ const Colorfulborder = (props: HeadingProps) => {
     return (
         <Heading
             borderBottomWidth='3px'
-            borderColor='gray.100'
+            borderColor='gray.400'
             position='relative'
+            padding={2}
             _before={{
                 position: 'absolute',
                 content: `""`,
-                display: 'block',
                 border: 'none',
-                borderBottomWidth: '3px',
-                borderStyle: 'solid',
-                borderColor: 'mainLight',
+                left: 0,
+                height: '3px',
+                backgroundColor: 'mainLight',
                 bottom: '-3px',
-                width: '30%'
+                width: '30%',
             }}
             {...props as any}
         >
-            <Box padding={2}>{props.children}</Box>
+            {props.children}
         </Heading>
     );
 };
@@ -115,6 +115,8 @@ const Sideborder = (props: HeadingProps) => {
         </Center>
     );
 };
+
+
 
 const headlines: { [key in DesignType]: any } = {
     leftborder: Leftborder,

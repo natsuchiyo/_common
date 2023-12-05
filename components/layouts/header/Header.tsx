@@ -9,6 +9,8 @@ import { headerIcon, websiteName } from '../../../../_config/constants';
 
 export function Header() {
 
+
+
     return (
         <Center
             as='header'
@@ -21,7 +23,8 @@ export function Header() {
             zIndex='layout'
         >
             <Linking href='/' textDecoration='none !important' color='white'>
-                <FontAwesomeIcon icon={headerIcon} style={{ marginRight: '4px' }} />{websiteName}
+                {headerIcon && <FontAwesomeIcon icon={headerIcon} style={{ marginRight: '4px' }} />}
+                {websiteName}
             </Linking>
         </Center>
     );

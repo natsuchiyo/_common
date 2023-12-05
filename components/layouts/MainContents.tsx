@@ -1,6 +1,5 @@
 import { FlexProps } from '@chakra-ui/react';
 import { Paper } from '../parts/Paper';
-import { MetaHead } from '../parts/MetaHead';
 
 
 

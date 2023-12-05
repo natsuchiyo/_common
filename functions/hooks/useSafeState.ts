@@ -1,3 +1,5 @@
+'use client';
+
 import { Draft } from "immer";
 import { useState, useCallback, useRef, useEffect, Dispatch, SetStateAction } from "react";
 import { useImmer } from "use-immer";

@@ -32,11 +32,11 @@ function BlogDateTime({ type, date, ...props }: TextProps & {
 
 
     const values = type === 'published' ? {
-        label: '公開日',
+        label: '公開',
         icon: TimeIcon,
         itemProp: 'datepublished'
     } : {
-        label: '更新日',
+        label: '更新',
         icon: TimeIcon,
         itemProp: 'datemodified'
     };

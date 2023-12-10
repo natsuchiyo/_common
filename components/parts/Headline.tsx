@@ -27,7 +27,9 @@ const Leftborder = (props: HeadingProps) => {
             paddingY='2'
             paddingLeft='4'
             borderLeftWidth='5px'
+            borderRadius='sm'
             borderColor='mainLight'
+            bgColor='chakra-body-bg'
             {...props as any}
         />
     );

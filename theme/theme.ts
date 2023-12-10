@@ -6,6 +6,7 @@ import { SelectTheme } from "./select";
 import { TableTheme } from "./table";
 import { fontsTheme } from "./fonts";
 import { accentColor, brandColor, clickableColor } from "../../_config/themeColors";
+import { semanticTokens } from "./semantics";
 
 
 
@@ -53,5 +54,7 @@ export const customTheme = extendTheme(
             Select: SelectTheme,
             Table: TableTheme,
             Textarea: TextAreaTheme
-        }
+        },
+
+        semanticTokens,
     });

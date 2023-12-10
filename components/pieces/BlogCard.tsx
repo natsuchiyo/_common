@@ -1,12 +1,8 @@
-import { Box, Divider, Flex, Heading, LinkBox } from "@chakra-ui/react";
-import ExportedImage from "next-image-export-optimizer";
+import { Divider, Flex, Heading, LinkBox } from "@chakra-ui/react";
 import { LinkingOverlay } from "../parts/Linking";
 import { Tags } from "../parts/Tags";
-import { Small } from "../parts/Text";
-import { baseUrl } from "../../../_config/constants";
-import { getPageInfo } from "../../functions/urls/usePageInfo";
-import { BlogDateTimes } from "./BlogDateTime";
 import { BlogMetaType } from "../../types";
+import { BlogDateTimes } from "./BlogDateTime";
 
 
 
@@ -20,10 +16,10 @@ export const BlogCard = (props: BlogMetaType) => {
             height='full'
             borderRadius='md'
             overflow='hidden'
-            bg='article'
+            bg='article-bg'
             maxWidth='380px'
             borderWidth='1px'
-            borderColor='paper'
+            borderColor='paper-bg'
             padding={4}
             boxShadow='md'
             display='flex'

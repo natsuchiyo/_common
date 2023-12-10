@@ -23,7 +23,7 @@ export const BlogCard = (props: BlogMetaType) => {
             bg='article'
             maxWidth='380px'
             borderWidth='1px'
-            borderColor='paper'
+            borderColor='paper-bg'
             padding={4}
             boxShadow='md'
             display='flex'

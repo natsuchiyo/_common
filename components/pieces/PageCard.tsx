@@ -40,15 +40,15 @@ export const PageCard = ({ url }: { url: string; }) => {
                 style={{ objectFit: 'contain' }}
             />
 
-            <Divider borderColor='mainDark' borderBottomWidth={2} margin='auto' width='80%' />
+            {/* <Divider borderColor='mainLight' borderBottomWidth={1} /> */}
 
-            <Box padding='5'>
+            <Box padding='4' paddingTop='2'>
 
                 <Heading as='h4' size='sm' >
                     <LinkingOverlay href={url}>{pageInfo.titleElm}</LinkingOverlay>
                 </Heading>
 
-                {pageInfo.tags && <Tags tagNames={pageInfo.tags} />}
+                {pageInfo.tags && <Tags tagNames={pageInfo.tags} marginY='2' />}
 
                 <Small >{pageInfo.description}</Small>
 

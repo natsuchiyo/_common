@@ -13,7 +13,7 @@ export const DescriptionArea = (props: ContainerProps) => {
     return (
         <Container
             centerContent
-            // maxWidth='750px'
+            maxWidth='750px'
             gap='12'
             // width='full'
             {...props as any}

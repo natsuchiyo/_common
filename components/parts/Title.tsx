@@ -16,7 +16,7 @@ export const Title = (props: BoxProps) => {
 
 
     return (
-        <Box marginX={4} {...props}>
+        <Box marginX={4} marginBottom={8} {...props}>
             <Headline
                 as='h1'
                 design="colorfulborder"
@@ -25,7 +25,7 @@ export const Title = (props: BoxProps) => {
                 size='lg'
                 children={pageInfo.titleElm}
             />
-            <Tags tagNames={pageInfo.tags} justifyContent='right' />
+            <Tags tagNames={pageInfo.tags} justifyContent='right' marginY='2' />
         </Box>
     );
 };

@@ -39,10 +39,10 @@ export const customTheme = extendTheme(
 
         config: {
             initialColorMode: 'light',
-            useSystemColorMode: false,
+            useSystemColorMode: true,
+
         },
 
-        // この方法では効かないのでbodyにclassnameを付けた
         fonts: fontsTheme,
 
         styles: { global: globalTheme },

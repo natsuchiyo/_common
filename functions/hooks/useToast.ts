@@ -13,19 +13,15 @@ export const useSuccessToast = (text?: string) => {
 export const successToastProps: UseToastOptions = {
     title: '完了！',
     status: 'success',
-    // position: 'bottom-right',
-    // duration: 2000,
 };
 
 
 export const errorToastProps: UseToastOptions = {
     title: '失敗しました',
     status: 'error',
-    // position: 'bottom-right',
-    // duration: 2000,
 };
 
-export const toastOptions = {
+export const toastDefaultOptions = {
     defaultOptions: {
         position: 'bottom-right' as const,
         duration: 2000,

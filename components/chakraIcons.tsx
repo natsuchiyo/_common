@@ -12,5 +12,6 @@ export {
     LinkIcon,
     ChevronLeftIcon,
     ChevronRightIcon,
-    StarIcon
+    StarIcon,
+    TimeIcon,
 } from '@chakra-ui/icons';

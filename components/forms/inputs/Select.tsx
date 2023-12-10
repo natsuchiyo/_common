@@ -6,12 +6,17 @@ import { get, RegisterOptions, useFormState } from "react-hook-form";
 import { FormContext } from "../Form";
 
 
-
-
-export const SelectInput = <T extends any = any>({ optionList, onChangeValue, ...props }: SelectProps & {
+type SelectInputPropsBase<T extends any = any> = SelectProps & {
     optionList: { value: T; label: string | number; }[];
+
+};
+
+export type SelectInputProps<T extends any = any> = SelectInputPropsBase<T> & {
     onChangeValue: (value: T) => void;
-}) => {
+};
+
+
+export const SelectInput = <T extends any = any>({ optionList, onChangeValue, ...props }: SelectInputProps<T>) => {
 
     const onChange: ChangeEventHandler<HTMLSelectElement> = (event) => {
         onChangeValue(optionList[event.target.selectedIndex].value);

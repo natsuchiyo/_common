@@ -1,6 +1,6 @@
 
 import { HStack, StackProps, Text, TextProps } from "@chakra-ui/react";
-import { TimeIcon } from "../../../_components/chakra";
+import { TimeIcon } from "../chakraIcons";
 
 
 

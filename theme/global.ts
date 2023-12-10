@@ -1,5 +1,3 @@
-import { theme } from "@chakra-ui/react";
-import { brandColor } from "../../_config/themeColors";
 import { getBrandColor } from "../functions/theme";
 
 

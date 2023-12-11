@@ -4,7 +4,7 @@ import { Box, BoxProps } from "@chakra-ui/react";
 import { Headline } from "./Headline";
 import { Tags } from "./Tags";
 import { getPageInfo, usePageInfo } from "../../functions/urls/usePageInfo";
-import { MdxMetaType } from "../../types";
+import { MdxMetaType } from "../../types/types";
 import { BlogDateTimes } from "../pieces/BlogDateTime";
 
 

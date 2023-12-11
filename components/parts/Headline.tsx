@@ -29,7 +29,7 @@ const Leftborder = (props: HeadingProps) => {
             borderLeftWidth='5px'
             borderRadius='sm'
             borderColor='mainLight'
-            bgColor='chakra-body-bg'
+            bgColor='headline-bg'
             {...props as any}
         />
     );
@@ -64,6 +64,8 @@ const Colorfulborder = (props: HeadingProps) => {
             borderColor='gray.400'
             position='relative'
             padding={2}
+            borderTopRadius='md'
+            bgColor='article-bg'
             _before={{
                 position: 'absolute',
                 content: `""`,

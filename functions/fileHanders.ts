@@ -1,6 +1,6 @@
 import fs from 'fs';
-import { MdxMetaType, BlogMetaType } from '../types';
-import { blogPostDir } from '../../_config/constants';
+import { MdxMetaType, BlogMetaType } from '../types/types';
+import { blogPostDir } from '../values/constants';
 
 
 

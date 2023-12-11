@@ -3,7 +3,7 @@ import { Linking } from "../../parts/Linking";
 import { Small } from "../../parts/Text";
 import { IconText } from "../../parts/IconText";
 import { EmailIcon, InfoIcon, StarIcon } from "../../chakraIcons";
-import { websiteName } from "../../../../_config/constants";
+import config from "../../../../_config/config";
 
 
 
@@ -46,7 +46,7 @@ export function Footer() {
                         />
                     </Linking>
                 </Stack>
-                <Small color='subtext'>© {websiteName}</Small>
+                <Small color='subtext'>© {config.websiteName}</Small>
             </Center >
         </footer>
     );

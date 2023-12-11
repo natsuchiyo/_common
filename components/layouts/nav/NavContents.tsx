@@ -1,5 +1,5 @@
 import { List, LinkBox, ListItem, Box } from '@chakra-ui/react';
-import { simulationUrlList } from '../../../../_config/urls';
+import pageInfos from '../../../../_config/pageInfos';
 import { LinkingOverlay } from '../../parts/Linking';
 import { headerHeight, leftNavWidth } from '../_constants';
 import { getPageInfo } from '../../../functions/urls/usePageInfo';
@@ -9,6 +9,15 @@ import { DragHandleIcon } from '../../chakraIcons';
 
 
 export function NavContents() {
+
+    const navUrlList = [] as string[];
+
+    pageInfos.forEach((pageInfo, pageName) => {
+        pageInfo.showNav && navUrlList.push(pageName);
+    });
+
+    if (!navUrlList.length) return null;
+
 
     return (
         <Box
@@ -32,7 +41,7 @@ export function NavContents() {
             />
 
             <List>
-                {simulationUrlList.map(url => (
+                {navUrlList.map(url => (
                     <LinkBox
                         as={ListItem}
                         key={url}

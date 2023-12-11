@@ -1,5 +1,5 @@
 import { Box } from "@chakra-ui/react";
-import { BasePageInfoType, PageInfoType, RoutingType } from "../../types";
+import { BasePageInfoType, PageInfoType, PageInfoMapType } from "../../types/pageInfos";
 
 
 
@@ -30,14 +30,14 @@ export const createPageInfo = (pageInfo: BasePageInfoType): PageInfoType => {
 
 
 
-export const createRouting = (basePageInfoList: [string, BasePageInfoType][]): RoutingType => {
+export const createPageInfos = (basePageInfoList: [string, BasePageInfoType][]): PageInfoMapType => {
 
     basePageInfoList.forEach((basePageInfoArray) => {
 
         basePageInfoArray[1] = createPageInfo(basePageInfoArray[1]);
     });
 
-    return new Map(basePageInfoList) as RoutingType;
+    return new Map(basePageInfoList) as PageInfoMapType;
 };
 
 

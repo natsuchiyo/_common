@@ -3,8 +3,8 @@ import ExportedImage from "next-image-export-optimizer";
 import { LinkingOverlay } from "../parts/Linking";
 import { Tags } from "../parts/Tags";
 import { Small } from "../parts/Text";
-import { baseUrl } from "../../../_config/constants";
 import { getPageInfo } from "../../functions/urls/usePageInfo";
+import config from "../../../_config/config";
 
 
 
@@ -33,7 +33,7 @@ export const PageCard = ({ url }: { url: string; }) => {
 
             <ExportedImage
                 priority
-                src={`${baseUrl}/img${url}.webp`}
+                src={`${config.domain}/img${url}.webp`}
                 alt={pageInfo.title}
                 width={300}
                 height={200}

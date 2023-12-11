@@ -1,6 +1,6 @@
-import { brandColor } from "../../_config/themeColors";
+import config from "../../_config/config";
 
 
 export const getBrandColor = (brightness: number) => {
-    return `${brandColor}.${brightness}`;
+    return `${config.brandColor}.${brightness}`;
 };

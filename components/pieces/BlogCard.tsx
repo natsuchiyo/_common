@@ -1,17 +1,15 @@
 import { Divider, Flex, Heading, LinkBox } from "@chakra-ui/react";
 import { LinkingOverlay } from "../parts/Linking";
 import { Tags } from "../parts/Tags";
-import { BlogMetaType } from "../../types";
+import { BlogMetaType } from "../../types/types";
 import { BlogDateTimes } from "./BlogDateTime";
 
 
 
 export const BlogCard = (props: BlogMetaType) => {
 
-
     return (
         <LinkBox
-            // display='inline-block'
             width='full'
             height='full'
             borderRadius='md'
@@ -29,7 +27,9 @@ export const BlogCard = (props: BlogMetaType) => {
                 boxShadow: 'md'
             }}
         >
+
             <Flex flexGrow={1} flexDirection='column' alignItems='stretch'>
+
                 <Heading as='h4' size='sm' flexGrow={1}>
                     <LinkingOverlay href={`/blog/${props.slug}`}>{props.title}</LinkingOverlay>
                 </Heading>

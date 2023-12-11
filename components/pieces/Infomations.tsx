@@ -2,13 +2,17 @@ import { Box, List, ListItem } from "@chakra-ui/react";
 import { IconText } from "../parts/IconText";
 import { Small } from "../parts/Text";
 import { Paper } from "../parts/Paper";
-import { InfomationsList } from "../../../_config/infomationList";
+import InfomationsList from "../../../_config/infomationList";
 import { InfoOutlineIcon } from "../chakraIcons";
 
 
 
 
 export const Infomations = () => {
+
+
+    if (!(InfomationsList?.length)) return null;
+
 
     return (
         <Paper padding='4' width='full' >

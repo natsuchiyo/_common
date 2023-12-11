@@ -1,7 +1,7 @@
 /**
  * できるだけimportはしないようにする
  */
-import { isProduction } from "../../constants";
+import { isProduction } from "../../values/constants";
 import { notice } from "../console";
 
 

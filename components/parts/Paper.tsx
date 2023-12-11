@@ -1,6 +1,6 @@
 'use client';
 
-import { Box, BoxProps, chakra } from "@chakra-ui/react";
+import { Box, chakra } from "@chakra-ui/react";
 
 
 

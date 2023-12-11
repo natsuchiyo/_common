@@ -1,4 +1,3 @@
-import { brandColor } from "../../_config/themeColors";
 import { getBrandColor } from "../functions/theme";
 
 export const SelectTheme = {

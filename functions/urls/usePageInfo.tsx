@@ -1,6 +1,6 @@
 import { usePathname } from "next/navigation";
-import { notFoundPageInfo, pageInfoList } from "../../../_config/urls";
-import { convertUrlToPageName } from "./functions";
+import pageInfos from "../../../_config/pageInfos";
+import { convertUrlToPageName, createPageInfo } from "./functions";
 
 
 
@@ -12,6 +12,11 @@ export const usePageInfo = () => {
 
 export const getPageInfo = (url: string) => {
 
-    return pageInfoList.get(convertUrlToPageName(url)) || notFoundPageInfo;
+    return pageInfos.get(convertUrlToPageName(url)) || notFoundPageInfo;
 };
 
+
+const notFoundPageInfo = createPageInfo({
+    _title: 'ページが見つかりません',
+    description: "ページが見つかりません",
+});

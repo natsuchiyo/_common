@@ -1,7 +1,6 @@
 import NextLink from 'next/link';
 import { Link as ChakraLink, LinkOverlay as ChakraLinkOverlay, LinkOverlayProps, LinkProps } from '@chakra-ui/react';
 import { ExternalLinkIcon } from '../chakraIcons';
-import { brandColor } from '../../../_config/themeColors';
 import { getBrandColor } from '../../functions/theme';
 
 

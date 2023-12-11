@@ -5,22 +5,21 @@ export const globalTheme = {
     body: {
         letterSpacing: '2px',
         lineHeight: "1.7",
-        backgroundColor: 'gray.300',
     },
     'body::-webkit-scrollbar': {
         paddingTop: '40px',
-        width: '10px',
-        height: '10px'
+        width: '8px',
+        height: '8px'
     },
     '::-webkit-scrollbar': {
-        width: '6px',
-        height: '6px'
+        width: '5px',
+        height: '5px'
     },
     '::-webkit-scrollbar-track': {
-        background: 'gray.100',
+        background: 'gray.200',
     },
     '::-webkit-scrollbar-thumb': {
-        background: getBrandColor(100),
+        background: getBrandColor(300),
         borderRadius: '5px'
     }
 };

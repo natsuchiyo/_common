@@ -1,8 +1,8 @@
 'use client';
 
 import { HStack, Badge, StackProps } from "@chakra-ui/react";
-import { TagType, TagsType } from "../../types";
-import { TagNameType, tagsMap } from "../../../_config/tags";
+import { TagNameType } from "../../types/tags";
+import tags from "../../../_config/tags";
 
 
 
@@ -12,7 +12,6 @@ export const Tags = ({ tagNames, ...props }: StackProps & { tagNames?: TagNameTy
 
     return (
         <HStack spacing='2'
-            // marginY='2' 
             {...props as any}>
             {tagNames.map(tagName => (
                 <Badge
@@ -20,8 +19,8 @@ export const Tags = ({ tagNames, ...props }: StackProps & { tagNames?: TagNameTy
                     variant='solid'
                     fontSize='sm'
                     fontWeight='normal'
-                    colorScheme={tagsMap[tagName].color}
-                    children={tagsMap[tagName].label}
+                    colorScheme={tags[tagName].color}
+                    children={tags[tagName].label}
                 />
             ))}
         </HStack>

@@ -17,29 +17,30 @@ export function BlogDateTimes({ datemodified, datepublished, ...props }: StackPr
             flexWrap="wrap"
             {...props as any}
         >
-            {datemodified !== datepublished && <BlogDateTime date={datemodified} type="modified" />}
-            <BlogDateTime date={datepublished} type="published" />
+            {datemodified !== datepublished && <ModifiedDate date={datemodified} />}
+            <PublishedDate date={datepublished} />
         </HStack>
     );
 };
 
 
 
-function BlogDateTime({ type, date, ...props }: TextProps & {
+function PublishedDate(props: { date: string; }) {
+    return <BlogDateTime label="公開" itemProp='datepublished' date={props.date} />;
+};
+
+
+function ModifiedDate(props: { date: string; }) {
+    return <BlogDateTime label="更新" itemProp='datemodified' date={props.date} />;
+};
+
+
+
+function BlogDateTime({ itemProp, date, label, ...props }: TextProps & {
     date: string;
-    type: 'published' | 'modified';
+    label: string;
+    itemProp: string;
 }) {
-
-
-    const values = type === 'published' ? {
-        label: '公開',
-        icon: TimeIcon,
-        itemProp: 'datepublished'
-    } : {
-        label: '更新',
-        icon: TimeIcon,
-        itemProp: 'datemodified'
-    };
 
     return (
         <Text
@@ -50,9 +51,9 @@ function BlogDateTime({ type, date, ...props }: TextProps & {
             fontSize='sm'
             {...props as any}
         >
-            <span>{values.label}</span>
-            <values.icon fontSize="small" />
-            <time dateTime={date} itemProp={values.itemProp} >{date}</time>
+            <span>{label}</span>
+            <TimeIcon fontSize="small" />
+            <time dateTime={date} itemProp={itemProp} >{date}</time>
         </Text>
     );
 };

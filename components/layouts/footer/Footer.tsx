@@ -46,7 +46,7 @@ export function Footer() {
                         />
                     </Linking>
                 </Stack>
-                <Small color='subtext'>© {config.websiteName}</Small>
+                <Small color='subtext'>© {config.websiteLabelName}</Small>
             </Center >
         </footer>
     );

@@ -11,7 +11,7 @@ export function Header() {
     return (
         <Center
             as='header'
-            bg='mainLight'
+            bgColor='reverse-header-bg'
             fontSize='xl'
             fontWeight='bold'
             width='full'
@@ -21,7 +21,7 @@ export function Header() {
         >
             <Linking href='/' textDecoration='none !important' color='white'>
                 {config.headerIcon && <FontAwesomeIcon icon={config.headerIcon} style={{ marginRight: '4px' }} />}
-                {config.websiteName}
+                {config.websiteLabelName}
             </Linking>
         </Center>
     );

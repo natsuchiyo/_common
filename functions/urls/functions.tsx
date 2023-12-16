@@ -47,6 +47,6 @@ export const convertUrlToPageName = (url: string) => {
 
     const path = url[url.length - 1] === '/' ? url.slice(0, -1) : url;
 
-    return path.slice(1);
+    return url[0] === '/' ? path.slice(1) : path;
 };
 

@@ -9,7 +9,7 @@ import { toastDefaultOptions } from "../../functions/hooks/useToast";
 import config from "../../../_config/config";
 
 
-const manager = createLocalStorageManager(config.domain + "-chakra-ui-color-mode");
+const manager = createLocalStorageManager(config.websiteName + "-chakra-ui-color-mode");
 
 
 export function Providers({ children }: PropsWithChildren) {

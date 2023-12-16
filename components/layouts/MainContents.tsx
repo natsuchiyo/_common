@@ -11,10 +11,11 @@ export const MainContents = (props: FlexProps) => {
             display='flex'
             flexDirection='column'
             alignItems='center'
-            gap='12'
+            gap={{ base: 8, lg: 12 }}
             paddingY='12'
             width='full'
             // maxWidth='3xl'
+            bgColor='article-bg'
             {...props}
         />
     );

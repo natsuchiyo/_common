@@ -9,7 +9,8 @@ export const createConfig = (customConfig: CustomConfigType): ConfigType => {
         brandLightNum: 400,
         brandDarkNum: 700,
         initialColorMode: 'light',
-        headerIcon: null
+        headerIcon: null,
+        basePath: ''
     };
 
     return Object.assign(customConfig, defaultConfig);

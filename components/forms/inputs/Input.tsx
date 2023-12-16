@@ -90,4 +90,3 @@ export const FormInput = ({ name, options, isShowError = true, ...props }: Input
         </FormErrorTooltip>
     );
 };
-

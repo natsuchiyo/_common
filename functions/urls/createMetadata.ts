@@ -9,7 +9,6 @@ export const createMetadata = (pagePath: string): Metadata => {
         pagePath = '/' + pagePath;
     }
 
-
     const pageInfo = getPageInfo(pagePath);
 
     return {

@@ -8,10 +8,10 @@ import config from "../../../_config/config";
 
 
 
-export const PageCard = ({ url }: { url: string; }) => {
+export const PageCard = ({ path }: { path: string; }) => {
 
 
-    const pageInfo = getPageInfo(url);
+    const pageInfo = getPageInfo(path);
 
 
     return (
@@ -33,7 +33,7 @@ export const PageCard = ({ url }: { url: string; }) => {
 
             <ExportedImage
                 priority
-                src={`${config.domain}/img${url}.webp`}
+                src={`${config.basePath}/img${path}.webp`}
                 alt={pageInfo.title}
                 width={300}
                 height={200}
@@ -45,7 +45,7 @@ export const PageCard = ({ url }: { url: string; }) => {
             <Box padding='4' paddingTop='2'>
 
                 <Heading as='h4' size='sm' >
-                    <LinkingOverlay href={url}>{pageInfo.titleElm}</LinkingOverlay>
+                    <LinkingOverlay href={path}>{pageInfo.titleElm}</LinkingOverlay>
                 </Heading>
 
                 {pageInfo.tags && <Tags tagNames={pageInfo.tags} marginY='2' />}

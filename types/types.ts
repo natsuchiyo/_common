@@ -1,4 +1,5 @@
 import { IconProp } from "@fortawesome/fontawesome-svg-core";
+import { ReactNode } from "react";
 
 
 
@@ -9,14 +10,15 @@ export type CustomConfigType = {
     accentColor: string;
     clickableColor: string;
     initialColorMode?: 'light' | 'dark';
+    websiteLabelName: string;
     websiteName: string;
-    domain: string;
     headerIcon?: IconProp;
+    basePath?: string;
 };
 
 export type InfomationType = {
     date: string;
-    text: string;
+    text: ReactNode;
 };
 
 

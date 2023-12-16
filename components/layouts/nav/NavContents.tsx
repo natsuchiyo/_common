@@ -5,18 +5,13 @@ import { headerHeight, leftNavWidth } from '../_constants';
 import { getPageInfo } from '../../../functions/urls/usePageInfo';
 import { IconText } from '../../parts/IconText';
 import { DragHandleIcon } from '../../chakraIcons';
+import { listedPathList } from '../../../values/listedPathList';
 
 
 
 export function NavContents() {
 
-    const navUrlList = [] as string[];
-
-    pageInfos.forEach((pageInfo, pageName) => {
-        pageInfo.showNav && navUrlList.push(pageName);
-    });
-
-    if (!navUrlList.length) return null;
+    if (!listedPathList.length) return null;
 
 
     return (
@@ -41,10 +36,10 @@ export function NavContents() {
             />
 
             <List>
-                {navUrlList.map(url => (
+                {listedPathList.map(path => (
                     <LinkBox
                         as={ListItem}
-                        key={url}
+                        key={path}
                         paddingX={2}
                         paddingY={4}
                         marginX={2}
@@ -55,8 +50,8 @@ export function NavContents() {
                         fontWeight='bold'
                         _hover={{ backgroundColor: 'mainLight', color: 'white' }}
                     >
-                        <LinkingOverlay href={url}>
-                            {getPageInfo(url).titleElm}
+                        <LinkingOverlay href={path}>
+                            {getPageInfo(path).titleElm}
                         </LinkingOverlay>
                     </LinkBox>
                 ))}

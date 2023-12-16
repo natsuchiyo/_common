@@ -10,9 +10,9 @@ export const usePageInfo = () => {
 };
 
 
-export const getPageInfo = (url: string) => {
+export const getPageInfo = (path: string) => {
 
-    return pageInfos.get(convertUrlToPageName(url)) || notFoundPageInfo;
+    return pageInfos.get(convertUrlToPageName(path)) || notFoundPageInfo;
 };
 
 

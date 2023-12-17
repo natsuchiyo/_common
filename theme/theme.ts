@@ -22,7 +22,6 @@ export const customTheme = extendTheme(
             mainDark: defaultTheme.colors[config.brandColor][config.brandDarkNum],
             button: defaultTheme.colors[config.clickableColor][500],
             accent: defaultTheme.colors[config.accentColor][500],
-            // link: theme.colors[clickableColor][600],
             warning: defaultTheme.colors.red[500],
             subtext: defaultTheme.colors.gray[600],
         },

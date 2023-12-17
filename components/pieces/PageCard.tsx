@@ -4,7 +4,6 @@ import { LinkingOverlay } from "../parts/Linking";
 import { Tags } from "../parts/Tags";
 import { Small } from "../parts/Text";
 import { getPageInfo } from "../../functions/urls/usePageInfo";
-import config from "../../../_config/config";
 import { getImgFilePath } from "../../functions/urls/getImgPath";
 
 

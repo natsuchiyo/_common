@@ -1,3 +1,4 @@
+import { Theme, ThemeComponentProps, ThemeConfig, ThemeExtension } from "@chakra-ui/react";
 import { IconProp } from "@fortawesome/fontawesome-svg-core";
 import { ReactNode } from "react";
 
@@ -9,11 +10,15 @@ export type CustomConfigType = {
     brandDarkNum?: number;
     accentColor: string;
     clickableColor: string;
+    headerBgColor?: string;
     initialColorMode?: 'light' | 'dark';
     websiteLabelName: string;
     websiteName: string;
     headerIcon?: IconProp;
     basePath?: string;
+    semanticColors?: {
+        [key: string]: { _light: string, _dark: string, };
+    };
 };
 
 export type InfomationType = {

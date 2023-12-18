@@ -1,6 +1,6 @@
 'use client';
 
-import { Box, BoxProps } from "@chakra-ui/react";
+import { Box, BoxProps, HeadingProps } from "@chakra-ui/react";
 import { Headline } from "./Headline";
 import { Tags } from "./Tags";
 import { getPageInfo, usePageInfo } from "../../functions/urls/usePageInfo";
@@ -31,7 +31,8 @@ export const Title = (props: BoxProps) => {
 };
 
 
-export const PageTitle = ({ path, ...props }: BoxProps & { path: string; }) => {
+
+export const PageTitle = ({ path, ...props }: HeadingProps & { path: string; }) => {
 
 
     const pageInfo = getPageInfo(path);
@@ -45,10 +46,11 @@ export const PageTitle = ({ path, ...props }: BoxProps & { path: string; }) => {
             marginX={4}
             marginBottom={12}
             children={pageInfo.titleElm}
+            {...props}
         />
-        // <Tags tagNames={pageInfo.tags} justifyContent='right' />
     );
 };
+
 
 
 export function BlogTitle({ mdxMeta }: { mdxMeta: MdxMetaType; }) {
@@ -59,8 +61,6 @@ export function BlogTitle({ mdxMeta }: { mdxMeta: MdxMetaType; }) {
             <Headline
                 as='h1'
                 design="colorfulborder"
-                // display='inline-block'
-                // textAlign='center'
                 size='lg'
                 children={mdxMeta.title}
             />

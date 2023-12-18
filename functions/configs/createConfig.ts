@@ -2,7 +2,6 @@ import { ConfigType, CustomConfigType } from "../../types/types";
 
 
 
-
 export const createConfig = (customConfig: CustomConfigType): ConfigType => {
 
     const defaultConfig = {
@@ -10,7 +9,8 @@ export const createConfig = (customConfig: CustomConfigType): ConfigType => {
         brandDarkNum: 700,
         initialColorMode: 'light',
         headerIcon: null,
-        basePath: ''
+        basePath: '',
+        headerBgColor: customConfig.brandColor
     };
 
     return Object.assign(defaultConfig, customConfig);

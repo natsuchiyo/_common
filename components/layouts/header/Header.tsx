@@ -11,7 +11,7 @@ export function Header() {
     return (
         <Center
             as='header'
-            bgColor='reverse-header-bg'
+            bgColor='header-bg'
             fontSize='xl'
             fontWeight='bold'
             width='full'

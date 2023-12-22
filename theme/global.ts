@@ -3,8 +3,8 @@ import { getBrandColor } from "../functions/theme";
 
 export const globalTheme = {
     body: {
-        letterSpacing: '2px',
-        lineHeight: "1.7",
+        letterSpacing: '3px',
+        lineHeight: "1.8",
     },
     'body::-webkit-scrollbar': {
         paddingTop: '40px',

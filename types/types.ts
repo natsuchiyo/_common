@@ -16,6 +16,7 @@ export type CustomConfigType = {
     websiteName: string;
     headerIcon?: IconProp;
     basePath?: string;
+    domain: string;
     semanticColors?: {
         [key: string]: { _light: string, _dark: string, };
     };
@@ -27,7 +28,9 @@ export type InfomationType = {
 };
 
 
-export type ConfigType = Required<CustomConfigType>;
+export type ConfigType = Required<CustomConfigType> & {
+    baseUrl: string;
+};
 
 export type TagType = { label: string; color: string; };
 

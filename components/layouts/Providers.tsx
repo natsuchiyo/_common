@@ -9,17 +9,31 @@ import { toastDefaultOptions } from "../../functions/hooks/useToast";
 import config from "../../../_config/config";
 
 
-const manager = createLocalStorageManager(config.websiteName + "-chakra-ui-color-mode");
+const storageKey = config.websiteName + "-chakra-ui-color-mode";
+
+
+const manager = createLocalStorageManager(storageKey);
 
 
 export function Providers({ children }: PropsWithChildren) {
 
     return (
         <RecoilRoot>
-            <ChakraProvider theme={customTheme} toastOptions={toastDefaultOptions} colorModeManager={manager}>
+            <ChakraProvider
+                theme={customTheme}
+                toastOptions={toastDefaultOptions}
+                colorModeManager={manager}
+            >
+
                 <GoogleAnalytics trackPageViews />
-                <ColorModeScript initialColorMode={customTheme.config.initialColorMode} />
+
+                <ColorModeScript
+                    initialColorMode={customTheme.config.initialColorMode}
+                    storageKey={storageKey}
+                />
+
                 {children}
+
             </ChakraProvider>
         </RecoilRoot>
     );

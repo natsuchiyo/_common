@@ -1,4 +1,4 @@
-import { extendTheme, theme, withDefaultColorScheme } from "@chakra-ui/react";
+import { Theme, extendTheme, theme, withDefaultColorScheme } from "@chakra-ui/react";
 import { ButtonTheme } from "./button";
 import { globalTheme } from "./global";
 import { InputTheme, TextAreaTheme } from "./input";

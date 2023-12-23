@@ -1,4 +1,4 @@
-import { Theme, extendTheme, theme, withDefaultColorScheme } from "@chakra-ui/react";
+import { extendTheme, theme, withDefaultColorScheme } from "@chakra-ui/react";
 import { ButtonTheme } from "./button";
 import { globalTheme } from "./global";
 import { InputTheme, TextAreaTheme } from "./input";
@@ -7,6 +7,8 @@ import { TableTheme } from "./table";
 import { fontsTheme } from "./fonts";
 import { semanticTokens } from "./semantics";
 import config from "../../_config/config";
+import { CheckboxTheme } from "./checkbox";
+import { SliderTheme } from "./Slider";
 
 
 
@@ -55,7 +57,9 @@ export const customTheme = extendTheme(
             Input: InputTheme,
             Select: SelectTheme,
             Table: TableTheme,
-            Textarea: TextAreaTheme
+            Textarea: TextAreaTheme,
+            Checkbox: CheckboxTheme,
+            Slider: SliderTheme
         },
 
         semanticTokens,

@@ -1,4 +1,4 @@
-import { getBrandColor } from "../functions/theme";
+import { getClickableColor } from "../functions/theme";
 
 
 export const InputTheme = {
@@ -20,12 +20,14 @@ export const InputTheme = {
         },
     },
     defaultProps: {
-        focusBorderColor: getBrandColor(300),
+        focusBorderColor: getClickableColor(400)
     },
 };
 
+
+
 export const TextAreaTheme = {
     defaultProps: {
-        focusBorderColor: getBrandColor(300),
+        focusBorderColor: getClickableColor(400)
     },
 };

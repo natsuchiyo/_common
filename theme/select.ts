@@ -1,4 +1,4 @@
-import { getBrandColor } from "../functions/theme";
+import { getClickableColor } from "../functions/theme";
 
 export const SelectTheme = {
     baseStyle: {
@@ -21,6 +21,6 @@ export const SelectTheme = {
         },
     },
     defaultProps: {
-        focusBorderColor: getBrandColor(300),
+        focusBorderColor: getClickableColor(400),
     },
 };

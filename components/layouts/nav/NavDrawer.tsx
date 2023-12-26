@@ -11,6 +11,7 @@ export function NavDrawer(props: PropsWithChildren) {
 
     const { isOpen, onClose, onToggle } = useDisclosure();
 
+    const NavIcon = isOpen ? SmallCloseIcon : HamburgerIcon;
 
     return (
         <>
@@ -21,9 +22,9 @@ export function NavDrawer(props: PropsWithChildren) {
                 width={headerHeight}
                 height={headerHeight}
                 aria-label='nav button'
-                bg='transparent'
+                bg='transparent !important'
                 color='white'
-                icon={isOpen ? <SmallCloseIcon boxSize='8' /> : <HamburgerIcon boxSize='8' />}
+                icon={<NavIcon boxSize='8' />}
                 onClick={onToggle}
             />
             <Drawer placement='left' onClose={onClose} isOpen={isOpen}>

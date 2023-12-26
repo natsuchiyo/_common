@@ -31,7 +31,7 @@ export const ColorInput = ({ label, value, onChangeValue, ...props }: BoxProps &
             <chakra.input
                 type='color'
                 width='1em'
-                height='1em'
+                height='1.2em'
                 value={value}
                 onChange={onChange}
             />

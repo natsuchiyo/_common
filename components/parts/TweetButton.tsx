@@ -1,7 +1,6 @@
 'use client';
 
 import { Box, BoxProps } from '@chakra-ui/react';
-import { usePathname, useSearchParams } from 'next/navigation';
 import { memo } from 'react';
 import { Share } from 'react-twitter-widgets';
 

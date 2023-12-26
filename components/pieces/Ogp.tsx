@@ -45,7 +45,6 @@ export function Ogp(props: { title: string; }) {
                             justifyContent: 'center',
                             flexGrow: 1,
                             letterSpacing: 3,
-                            // border: '1px solid white'
                         }}
                     >
                         {props.title}👨🏻‍💻

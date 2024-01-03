@@ -44,6 +44,7 @@ export const FormSelect = <T extends any = any>({ name, options, optionList, ...
     const { errors } = useFormState({ name, control });
     const error = get(errors, name);
 
+
     return (
         <Select {...props as any} isInvalid={error} {...register(name, options)}>
             {optionList.map((option, i) => (

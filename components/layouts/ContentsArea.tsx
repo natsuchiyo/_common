@@ -14,12 +14,12 @@ export const ContentsArea = (props: PropsWithChildren) => {
             gridTemplateColumns={{ base: '100%', lg: ` 1fr ${asideWidth}` }}
             gridTemplateRows={{ base: 'auto auto auto', lg: `1fr auto` }}
             paddingY={4}
-            paddingX={{ base: 0, sm: 4 }}
+            paddingX={{ base: 1, sm: 4 }}
             gap={4}
             height='full'
         >
-
-            <GridItem area='main'>
+            {/* overflowX がないと数式を表示させるとき画面からはみ出る*/}
+            <GridItem area='main' overflowX='hidden'>
                 <Center>
                     {props.children}
                 </Center>

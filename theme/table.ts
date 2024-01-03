@@ -30,6 +30,9 @@ export const TableTheme = {
             td: { borderWidth: '1px', },
             thead: { border: 'none' }
         },
+        'unstyled': {
+            thead: { border: 'none' }
+        },
     },
 
     sizes: {

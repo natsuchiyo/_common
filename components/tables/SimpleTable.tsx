@@ -1,4 +1,4 @@
-import { Box, Table, TableProps } from '@chakra-ui/react';
+import { Box, Table, TableCaption, TableContainer, TableContainerProps, TableProps } from '@chakra-ui/react';
 import { memo, ReactNode } from 'react';
 import { CustomTbody } from './Tbody';
 import { CustomThead } from './Thead';
@@ -14,12 +14,14 @@ export const SimpleTable = memo(function SimpleTable({
     size,
     variant,
     outline,
+    tableWidth,
     ...props
 }: Omit<TableProps, 'outline'> & {
     data?: null | ReactNode[][];
     columnHeaders?: TableHeaderType[];
     rowHeaders?: TableHeaderType[];
     firstHeader?: string;
+    tableWidth?: number | string;
     outline?: true;
 }) {
 
@@ -33,17 +35,14 @@ export const SimpleTable = memo(function SimpleTable({
 
 
     return (
-        <Box
+        <TableContainer
             borderRadius='md'
-            borderWidth={outline ? '1px' : 'none'}
-            overflowX='auto'
-            overflowY='hidden'
-            width='full'
+            borderWidth={outline ? '1px' : 0}
             maxWidth='full'
             {...props as any}
         >
             <Table
-                whiteSpace='nowrap'
+                width={tableWidth}
                 variant={variant}
                 size={size}
                 sx={style}
@@ -60,8 +59,7 @@ export const SimpleTable = memo(function SimpleTable({
                     columnHeaders={columnHeaders}
                     rowHeaders={rowHeaders}
                 />
-
             </Table>
-        </Box >
+        </TableContainer >
     );
 });

@@ -1,7 +1,7 @@
 import { SimpleTable } from '../tables/SimpleTable';
 import { Center } from '@chakra-ui/react';
 import { Headline } from '../parts/Headline';
-import { DescriptionSection } from '../pieces/Descriptions';
+import { DescripSection } from '../pieces/Descriptions';
 
 
 
@@ -10,7 +10,7 @@ import { DescriptionSection } from '../pieces/Descriptions';
 export const ThreeDescription = () => {
 
     return (
-        <DescriptionSection title='3Dの操作方法'>
+        <DescripSection title='3Dの操作方法'>
 
             <Center>
                 <SimpleTable
@@ -34,6 +34,6 @@ export const ThreeDescription = () => {
                     ]}
                 />
             </Center>
-        </DescriptionSection>
+        </DescripSection>
     );
 };

@@ -2,7 +2,7 @@
 
 import { Input, InputProps } from "@chakra-ui/react";
 import { ChangeEvent, useContext } from "react";
-import { get, RegisterOptions, useFormState } from "react-hook-form";
+import { Controller, get, RegisterOptions, useFormState } from "react-hook-form";
 import { FormContext } from "../Form";
 import { FormErrorTooltip } from "../parts/FormErrorTooltip";
 import { round } from "../../../functions/maths/math";
@@ -20,7 +20,7 @@ export type NumInputProps = InputProps & {
     max?: number;
 };
 
-export type FormInputProps = InputProps & {
+export type FormNumInputProps = Omit<NumInputProps, 'value' | 'onChangeValue'> & {
     name: string;
 };
 
@@ -74,23 +74,26 @@ export const NumInput = ({ onChangeValue, percentage, decimalLength, ...props }:
 };
 
 
-
-
-export const FormInput = ({ name, options, isShowError = true, ...props }: InputProps & {
+export const FormNumInput = ({ name, ...props }: FormNumInputProps & {
     name: string;
-    options?: RegisterOptions;
-    isShowError?: boolean;
 }) => {
 
 
-    const { register, control } = useContext(FormContext);
-    const { errors } = useFormState({ name, control });
-    const error = get(errors, name);
-
+    const { control } = useContext(FormContext);
 
     return (
-        <FormErrorTooltip isShow={isShowError && error} text={error?.message}  >
-            <Input  {...props as any} isInvalid={error} {...register(name, options)} />
-        </FormErrorTooltip>
+        <Controller
+            control={control}
+            name={name}
+            render={({ field: { onChange, ...field }, fieldState, formState }) => {
+                console.log('↓-----------------------------field, fieldState,formState--------------------------------------------');
+                console.log(field, fieldState, formState);
+
+                return (
+                    <NumInput  {...props} {...field} onChangeValue={onChange} />
+                );
+            }
+            }
+        />
     );
 };

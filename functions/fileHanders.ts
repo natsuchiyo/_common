@@ -6,9 +6,15 @@ import { blogPostDir } from '../values/constants';
 
 export const getBlogFileNameList = () => {
 
-    return fs.readdirSync(blogPostDir, { withFileTypes: true })
-        .filter(dirent => dirent.isFile())
-        .map(dirent => dirent.name);
+    try {
+        return fs.readdirSync(blogPostDir, { withFileTypes: true })
+            .filter(dirent => dirent.isFile())
+            .map(dirent => dirent.name);
+
+    } catch (error) {
+        return [];
+    }
+
 };
 
 

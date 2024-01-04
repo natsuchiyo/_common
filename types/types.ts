@@ -1,4 +1,3 @@
-import { Theme, ThemeComponentProps, ThemeConfig, ThemeExtension } from "@chakra-ui/react";
 import { IconProp } from "@fortawesome/fontawesome-svg-core";
 import { ReactNode } from "react";
 

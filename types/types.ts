@@ -53,3 +53,9 @@ export type MdxMetaType = {
 export type BlogMetaType = MdxMetaType & {
     slug: string;
 };
+
+
+export type SizeType = {
+    width: number;
+    height: number;
+};

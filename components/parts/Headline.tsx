@@ -90,7 +90,7 @@ const Colorfulborder = (props: HeadingProps) => {
 const Sideborder = (props: HeadingProps) => {
 
     return (
-        <Center>
+        <Center width='full'>
             <Heading
                 fontSize='2xl'
                 position='relative'

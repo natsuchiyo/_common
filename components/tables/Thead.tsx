@@ -18,7 +18,7 @@ export const CustomThead = memo(function CustomThead(props: {
                 {props.rowHeaders && <Th >{props.firstHeader}</Th>}
 
                 {props.columnHeaders.map((header, i) => (
-                    <Th key={i}  {...header.cellProps as any}>{header.label}</Th>
+                    <Th key={i} color='gray.600' {...header.cellProps as any}>{header.label}</Th>
                 ))}
             </Tr>
         </Thead>

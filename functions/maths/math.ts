@@ -10,6 +10,10 @@ export const round = (value: number, digit: number) => {
 };
 
 
+export const calcCountRate = (tryCount: number, resultCount: number, digit = 0) => {
+    return tryCount ? ((resultCount / tryCount) * 100).toFixed(digit) : 0;
+};
+
 
 export const histogram = (data: number[], binRange: number) => {
 

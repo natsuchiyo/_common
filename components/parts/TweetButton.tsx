@@ -15,18 +15,16 @@ export const TweetButton = memo(function TweetButton({ text, hashtags, url, ...p
     url?: string;
 }) {
 
-    // const url = typeof window === 'undefined' ? '' : window.location.href;
-    // const pathname = useSearchParams();
 
-    // console.log('↓---------------------------useSearchParams----------------------------------------------');
-    // console.log(pathname);
+    url = url || typeof window === 'undefined' ? '' : window.location.href;
+
 
     return (
         // styledでlineHeightを設定すると反映されない（iflameのせい？）
         // 更新すると一瞬消えて高さがずれるためminHeightを設定する
         <Box minHeight='30px' {...props}>
             <Share
-                url={url || window.location.href}
+                url={url}
                 options={{
                     text: text,
                     hashtags: hashtags,

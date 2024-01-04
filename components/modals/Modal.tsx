@@ -82,7 +82,7 @@ export const FormModal = <T extends FieldValues = any>({ formProps, title, modal
 
             <ModalContent>
 
-                <ModalHeader children={title} />
+                <ModalHeader children={title} borderBottomWidth={title ? '1px' : 0} />
                 <ModalCloseButton />
 
                 <Form {...formProps} onSubmit={onSubmit}>
@@ -101,4 +101,4 @@ export const FormModal = <T extends FieldValues = any>({ formProps, title, modal
 
         </ChakraModal>
     );
-};
+};;

@@ -8,31 +8,38 @@ import { Box, BoxProps, Container, ContainerProps } from '@chakra-ui/react';
 
 
 
-export const DescriptionArea = (props: ContainerProps) => {
+export const DescripArea = (props: ContainerProps) => {
 
     return (
         <Container
-            centerContent
             maxWidth='750px'
-            gap='12'
-            // width='full'
+            padding={0}
             {...props as any}
+            sx={{
+                'br + .katex': {
+                    display: 'block',
+                    textAlign: 'center',
+                    overflowX: 'auto',
+                    overflowY: 'hidden',
+                    paddingY: 1,
+                    fontSize: { base: undefined, md: '1.35em' },
+                    whiteSpace: 'nowrap'
+                }
+            }}
         />
     );
 };
 
 
 
-
-
-export const DescriptionSection = (props: {
+export const DescripSection = (props: {
     title: string;
     children: ReactNode;
 }) => {
 
     return (
-        <Box as='section' maxWidth='full' paddingX={{ base: 0, sm: 8, lg: 12 }}        >
-            <Headline as='h2' design='sideborder' children={props.title} marginBottom='6' />
+        <Box as='section' maxWidth='full' marginY='6' >
+            <Headline as='h2' design='sideborder' children={props.title} />
             {props.children}
         </Box>
     );
@@ -41,16 +48,15 @@ export const DescriptionSection = (props: {
 
 
 
-
-
-export const DescripSubArea = (props: BoxProps) => {
+export const DescripSubSection = ({ title, children, ...props }: BoxProps & {
+    title: string;
+}) => {
 
     return (
-        <Box
-            paddingY='4'
-            paddingX={{ base: '0', sm: '4', lg: '8' }}
-            {...props}
-        />
+        <Box as='section' marginY='16' {...props}>
+            <Headline as='h3' size='md' design='leftborder' children={title} marginBottom={4} />
+            {children}
+        </Box>
     );
 };
 

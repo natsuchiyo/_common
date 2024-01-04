@@ -6,7 +6,7 @@ export const ogpSize = {
 };
 
 
-export function Ogp(props: { title: string; }) {
+export function OgImage(props: { title: string; }) {
 
     return (
         <div style={{

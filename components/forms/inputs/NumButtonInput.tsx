@@ -25,7 +25,6 @@ export const NumButtonInput = forwardRef(function NumButtonInput({ onClickPlus, 
             <Button value='1' onClick={onClickPlus as any} fontSize='xl' size='xs'>+</Button>
             <Input
                 type='number'
-                width='auto'
                 marginX='2'
                 ref={ref}
                 {...props as any}

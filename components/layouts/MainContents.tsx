@@ -7,14 +7,14 @@ export const MainContents = (props: FlexProps) => {
 
     return (
         <Paper
-            padding={1}
+            paddingX={{ base: 2, sm: 6 }}
             display='flex'
             flexDirection='column'
             alignItems='center'
             gap={{ base: 8, lg: 12 }}
-            paddingY='12'
+            paddingTop='12'
+            // padding='12'
             width='full'
-            // maxWidth='3xl'
             bgColor='article-bg'
             {...props}
         />

@@ -9,7 +9,7 @@ export const DictionaryList = (props: { list: [string, string][]; }) => {
             {props.list.map(([word, description], i) => (
                 <ListItem key={i}>
                     <Box fontWeight='bold'>{word}</Box>
-                    <Box paddingLeft='8'>{description}</Box>
+                    <Box paddingLeft={{ base: 4, sm: 8 }}>{description}</Box>
                 </ListItem>
             ))}
         </List>

@@ -23,11 +23,18 @@ export const getBlogMdxFile = (fileName: string) => {
 
     fileName = fileName + (fileName.endsWith(".mdx") ? '' : '.mdx');
 
-    // `../../${blogPostDir}/${fileName}`ではエラーとなる
-    const { default: MDXContent, meta }: { default: any; meta: MdxMetaType; }
-        = require(`./../../_blogPosts/${fileName}`);
 
-    return { MDXContent, meta };
+    // TODO 
+    try {
+        // `../../${blogPostDir}/${fileName}`ではエラーとなる
+        const { default: MDXContent, meta }: { default: any; meta: MdxMetaType; }
+            = require(`./../../_blogPosts/${fileName}`);
+
+        return { MDXContent, meta };
+
+    } catch (error) {
+        return { MDXContent: {}, meta: {} as MdxMetaType };
+    }
 };
 
 

@@ -86,8 +86,6 @@ export const FormNumInput = ({ name, ...props }: FormNumInputProps & {
             control={control}
             name={name}
             render={({ field: { onChange, ...field }, fieldState, formState }) => {
-                console.log('↓-----------------------------field, fieldState,formState--------------------------------------------');
-                console.log(field, fieldState, formState);
 
                 return (
                     <NumInput  {...props} {...field} onChangeValue={onChange} />

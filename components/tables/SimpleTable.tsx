@@ -34,12 +34,14 @@ export const SimpleTable = memo(function SimpleTable({
         : undefined;
 
 
+
     return (
         <TableContainer
             borderRadius='md'
             borderWidth={outline ? '1px' : 0}
             maxWidth='full'
             {...props as any}
+        // bg='white'
         >
             <Table
                 width={tableWidth}

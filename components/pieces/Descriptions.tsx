@@ -39,7 +39,7 @@ export const DescripSection = (props: {
 
     return (
         <Box as='section' maxWidth='full' marginY='6' >
-            <Headline as='h2' design='sideborder' children={props.title} />
+            <Headline as='h2' design='doubleborder' children={props.title} />
             {props.children}
         </Box>
     );

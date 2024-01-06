@@ -24,6 +24,8 @@ export const Title = (props: BoxProps) => {
                 textAlign='center'
                 size='lg'
                 children={pageInfo.titleElm}
+                // これがないと下線の色がわずかにずれる
+                lineHeight='1.33 !important'
             />
             <Tags tagNames={pageInfo.tags} justifyContent='right' marginY='2' />
         </Box>

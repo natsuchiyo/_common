@@ -9,6 +9,7 @@ import { semanticTokens } from "./semantics";
 import config from "../../_config/config";
 import { CheckboxTheme } from "./checkbox";
 import { SliderTheme } from "./Slider";
+import { FormTheme } from "./form";
 
 
 
@@ -59,7 +60,8 @@ export const customTheme = extendTheme(
             Table: TableTheme,
             Textarea: TextAreaTheme,
             Checkbox: CheckboxTheme,
-            Slider: SliderTheme
+            Slider: SliderTheme,
+            Form: FormTheme
         },
 
         semanticTokens,

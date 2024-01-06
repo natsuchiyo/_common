@@ -29,3 +29,5 @@ export const histogram = (data: number[], binRange: number) => {
 
     return bins;
 };
+
+

@@ -1,5 +1,6 @@
 import { FlexProps } from '@chakra-ui/react';
 import { Paper } from '../parts/Paper';
+import { RecoilRootClient } from '../metas/RecoilRootClient';
 
 
 
@@ -18,5 +19,19 @@ export const MainContents = (props: FlexProps) => {
             bgColor='article-bg'
             {...props}
         />
+    );
+};
+
+
+
+
+export const RecoilMainContents = (props: FlexProps) => {
+
+    return (
+        <RecoilRootClient>
+            <MainContents
+                {...props}
+            />
+        </RecoilRootClient>
     );
 };
